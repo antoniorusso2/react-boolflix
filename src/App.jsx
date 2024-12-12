@@ -1,10 +1,12 @@
 import './App.css';
+import Header from './components/Header';
+import { GlobalContext } from './globalContext';
 
 function App() {
   return (
-    <>
-      <div>boolflix</div>
-    </>
+    <GlobalContext.Provider>
+      <Header />
+    </GlobalContext.Provider>
   );
 }
 

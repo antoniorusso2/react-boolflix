@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { GlobalContext } from '../globalContext';
 
 export default function MainContent() {
-  const { films } = useContext(GlobalContext);
+  const { films, tvSeries } = useContext(GlobalContext);
 
   const flags = {
     it: 'src/assets/flags/italy.png',
@@ -17,8 +17,11 @@ export default function MainContent() {
     <main>
       <div className="container">
         <div className="row">
-          <ul>
-            <h2>Films</h2>
+          {/* lista dei films */}
+          <div className="film-list">
+            <h2>Film</h2>
+
+            {/* map array films */}
             {films &&
               films.map((film) => (
                 <div key={film.id} className="col">
@@ -33,7 +36,28 @@ export default function MainContent() {
                   </ul>
                 </div>
               ))}
-          </ul>
+          </div>
+
+          {/* lista serie tv */}
+          <div className="tv-series-list">
+            <h2>Serie Tv</h2>
+
+            {/* map array films */}
+            {tvSeries &&
+              tvSeries.map((serie) => (
+                <div key={serie.id} className="col">
+                  <ul>
+                    <h3>{serie.title}</h3>
+                    <li className="title">Titolo: {serie.title}</li>
+                    <li className="original-title">Titolo originale: {serie.original_title}</li>
+                    <li className="language">
+                      <span>Lingua:</span> <img className="flag" src={flags[serie.original_language]} alt="" />
+                    </li>
+                    <li className="ratings">Voto {serie.vote_average}</li>
+                  </ul>
+                </div>
+              ))}
+          </div>
         </div>
       </div>
     </main>

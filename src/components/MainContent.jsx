@@ -1,17 +1,10 @@
 import { useContext } from 'react';
 import { GlobalContext } from '../globalContext';
 
+import flags from '../utilities/flags';
+
 export default function MainContent() {
   const { films, tvSeries } = useContext(GlobalContext);
-
-  const flags = {
-    it: 'src/assets/flags/italy.png',
-    en: 'src/assets/flags/england.jpg',
-    de: 'src/assets/flags/germany.png',
-    es: 'src/assets/flags/spain.png',
-    kr: 'src/assets/flags/korea.png',
-    cn: 'src/assets/flags/korea.jpg',
-  };
 
   return (
     <main>

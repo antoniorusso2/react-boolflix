@@ -14,8 +14,6 @@ export default function Header() {
   function handleSearch(e) {
     const value = e.target.value;
     setSearch(value);
-    // setSearch(filter);
-    console.log('set filter');
   }
 
   function onSearch() {
@@ -26,12 +24,7 @@ export default function Header() {
         query: search,
       },
     });
-
-    console.log('set search e options');
   }
-
-  console.log(search);
-  console.log(options);
 
   return (
     <header>

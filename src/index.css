@@ -16,6 +16,10 @@ body {
 
   min-height: 100vh;
 }
+img {
+  display: block;
+  width: 100%;
+}
 
 button {
   border-radius: 8px;
@@ -35,6 +39,13 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+.language {
+  display: flex;
+  align-items: center;
+}
+.flag {
+  max-width: 30px;
 }
 
 @media (prefers-color-scheme: light) {

@@ -11,19 +11,19 @@ export default function MainContent() {
       <section className="film-list">
         <div className="container">
           <div className="row">
-            <div className="col-12">
-              <h2>Film</h2>
-              <MediaList items={films} />
-            </div>
+            <h2 className="col-12">Film</h2>
+            <MediaList items={films} />
           </div>
           {/* lista dei films */}
         </div>
       </section>
 
       {/* lista serie tv */}
-      <section className="tv-series-list row">
+      <section className="tv-series-list">
         <div className="container">
-          <h2>Serie Tv</h2>
+          <div className="row">
+            <h2 className="col-12">Serie Tv</h2>
+          </div>
           <MediaList items={tvSeries} />
         </div>
       </section>

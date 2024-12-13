@@ -3,8 +3,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar as emptyStar } from '@fortawesome/free-regular-svg-icons';
 import { faStar as filledStar } from '@fortawesome/free-solid-svg-icons';
+
 import flags from '../../utilities/flags';
 import placeholder from '../../assets/placeholder.jpg';
+
+import style from './Card.module.css';
 
 const BASE_IMG_URI = 'https://image.tmdb.org/t/p/';
 
@@ -22,25 +25,27 @@ export default function Card({ item }) {
   }
 
   return (
-    <div className="card">
-      <div className="card-thumb">
-        <h3>{title}</h3>
-        <img src={imgPath || placeholder} alt="" />
-      </div>
+    <>
+      <h3 className={style.title}>{title}</h3>
+      <div className={style.card}>
+        <div className={style.thumb}>
+          <img className={style.img} src={backdrop_path ? imgPath : placeholder} alt="" />
+        </div>
 
-      <div className="overlay details">
-        <p className="title">Titolo: {title}</p>
-        <p className="original-title">Titolo originale: {original_title}</p>
-        <div className="language">
-          <span>Lingua:</span> <img className="flag" src={flags[original_language]} alt="" />
-        </div>
-        <div className="ratings">
-          <p>Voto {vote}</p>
-          {numOfStars.map((star, index) => (
-            <span key={index}>{star}</span>
-          ))}
+        <div className={style.overlay}>
+          <p className={style.media_title}>Titolo: {title}</p>
+          <p className={style.original_title}>Titolo originale: {original_title}</p>
+          <div className="language">
+            <span>Lingua:</span> <img className="flag" src={flags[original_language]} alt="" />
+          </div>
+          <div className="ratings">
+            <p>Voto {vote}</p>
+            {numOfStars.map((star, index) => (
+              <span key={index}>{star}</span>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

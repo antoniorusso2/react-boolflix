@@ -1,0 +1,11 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  color: aliceblue;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.card_wrap {
+  width: calc(100% / 4 - var(--base-padding));
+}

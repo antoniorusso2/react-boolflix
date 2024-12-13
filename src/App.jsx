@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { GlobalContext } from './globalContext';
 
-import Header from './components/Header';
-import MainContent from './components/MainContent';
+import Header from './components/Header/Header.jsx';
+import MainContent from './components/MainContent/MainContent.jsx';
 
 import './App.css';
 

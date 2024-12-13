@@ -3,8 +3,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar as emptyStar } from '@fortawesome/free-regular-svg-icons';
 import { faStar as filledStar } from '@fortawesome/free-solid-svg-icons';
-import flags from '../utilities/flags';
-import placeholder from '../assets/placeholder.jpg';
+import flags from '../../utilities/flags';
+import placeholder from '../../assets/placeholder.jpg';
 
 const BASE_IMG_URI = 'https://image.tmdb.org/t/p/';
 
@@ -18,7 +18,7 @@ export default function Card({ item }) {
   const numOfStars = [];
 
   for (let i = 0; i < maxVote; i++) {
-    i < vote ? numOfStars.push(i + 1) : numOfStars.push('');
+    i < vote ? numOfStars.push(<FontAwesomeIcon icon={filledStar} />) : numOfStars.push(<FontAwesomeIcon icon={emptyStar} />);
   }
 
   return (
@@ -37,7 +37,7 @@ export default function Card({ item }) {
         <div className="ratings">
           <p>Voto {vote}</p>
           {numOfStars.map((star, index) => (
-            <span key={index}>{star ? <FontAwesomeIcon icon={filledStar} /> : <FontAwesomeIcon icon={emptyStar} />}</span>
+            <span key={index}>{star}</span>
           ))}
         </div>
       </div>

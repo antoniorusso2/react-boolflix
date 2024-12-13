@@ -1,18 +1,22 @@
 import { useContext } from 'react';
-import { GlobalContext } from '../globalContext';
+import { GlobalContext } from '../../globalContext';
 
-import MediaList from './MediaList';
+import MediaList from '../MediaList/MediaList';
 
 export default function MainContent() {
   const { films, tvSeries } = useContext(GlobalContext);
 
   return (
     <main>
-      <section className="film-list row">
+      <section className="film-list">
         <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <h2>Film</h2>
+              <MediaList items={films} />
+            </div>
+          </div>
           {/* lista dei films */}
-          <h2>Film</h2>
-          <MediaList items={films} />
         </div>
       </section>
 

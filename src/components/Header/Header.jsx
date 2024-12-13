@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from 'react';
-import { GlobalContext } from '../globalContext';
+import { GlobalContext } from '../../globalContext';
 import axios from 'axios';
 
 //import utilities
-import formatTvData from '../utilities/format-tv-response';
-import { defaultFilmOptions, defaultTvSeriesOptions } from '../utilities/default-request-options';
+import formatTvData from '../../utilities/format-tv-response';
+import { defaultFilmOptions, defaultTvSeriesOptions } from '../../utilities/default-request-options';
 
 export default function Header() {
   const [filmOptions, setFilmOptions] = useState(defaultFilmOptions);

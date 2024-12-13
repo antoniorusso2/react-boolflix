@@ -1,5 +1,13 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  --base-padding: 1.2rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -12,8 +20,6 @@ a:hover {
 }
 
 body {
-  margin: 0;
-
   min-height: 100vh;
 }
 img {
@@ -22,9 +28,10 @@ img {
 }
 
 button {
-  border-radius: 8px;
+  border-radius: 0.5rem;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 0 var(--base-padding);
+  line-height: 2rem;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
@@ -33,12 +40,39 @@ button {
   transition: border-color 0.25s;
   color: aliceblue;
 }
+
 button:hover {
   border-color: #646cff;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+nav {
+  padding: 0 var(--base-padding);
+}
+input {
+  line-height: 2rem;
+  padding: 0 var(--base-padding);
+  margin-right: 1rem;
+}
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--base-padding) 0;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0 var(--base-padding);
+}
+.col-12 {
+  flex-basis: 100%;
+}
+.col-3 {
+  flex-basis: calc(100% / 3 - 1.2rem);
 }
 .language {
   display: flex;

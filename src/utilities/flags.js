@@ -1,10 +1,15 @@
+import itFlag from '../assets/flags/italy.png';
+import enFlag from '../assets/flags/england.jpg';
+import deFlag from '../assets/flags/germany.png';
+import esFlag from '../assets/flags/spain.png';
+import krFlag from '../assets/flags/korea.png';
+
 const flags = {
-  it: 'src/assets/flags/italy.png',
-  en: 'src/assets/flags/england.jpg',
-  de: 'src/assets/flags/germany.png',
-  es: 'src/assets/flags/spain.png',
-  kr: 'src/assets/flags/korea.png',
-  cn: 'src/assets/flags/korea.jpg',
+  it: itFlag,
+  en: enFlag,
+  de: deFlag,
+  es: esFlag,
+  kr: krFlag,
 };
 
 export default flags;

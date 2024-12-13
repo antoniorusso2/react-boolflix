@@ -34,14 +34,12 @@ export default function Card({ item }) {
         <div className="language">
           <span>Lingua:</span> <img className="flag" src={flags[original_language]} alt="" />
         </div>
-        <p className="ratings">
-          Voto {vote}
-          <div className="stars">
-            {numOfStars.map((star, index) => (
-              <span key={index}>{star ? <FontAwesomeIcon icon={filledStar} /> : <FontAwesomeIcon icon={emptyStar} />}</span>
-            ))}
-          </div>
-        </p>
+        <div className="ratings">
+          <p>Voto {vote}</p>
+          {numOfStars.map((star, index) => (
+            <span key={index}>{star ? <FontAwesomeIcon icon={filledStar} /> : <FontAwesomeIcon icon={emptyStar} />}</span>
+          ))}
+        </div>
       </div>
     </div>
   );

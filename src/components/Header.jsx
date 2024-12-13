@@ -55,6 +55,7 @@ export default function Header() {
       },
     });
   }
+
   //searchbar
   const [search, setSearch] = useState('');
 

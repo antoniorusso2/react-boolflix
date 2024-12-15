@@ -37,7 +37,6 @@ body {
 }
 img {
   display: block;
-  max-width: 100%;
 }
 
 button {
@@ -71,7 +70,7 @@ input {
   margin-right: 1rem;
 }
 .container {
-  max-width: 1280px;
+  max-width: 2400px;
   margin: 0 auto;
   padding: var(--base-padding) 0;
 }
@@ -96,6 +95,9 @@ input {
   max-width: 30px;
 }
 
+h2 {
+  color: aliceblue;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

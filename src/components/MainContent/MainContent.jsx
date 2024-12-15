@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { GlobalContext } from '../../globalContext';
+import style from './MainContent.module.css';
 
 import MediaList from '../MediaList/MediaList';
 
@@ -11,7 +12,7 @@ export default function MainContent() {
       <section className="film-list">
         <div className="container">
           <div className="row">
-            <h2 className="col-12">Film</h2>
+            <h2 className={style.section_title}>Film</h2>
             <MediaList items={films} />
           </div>
           {/* lista dei films */}
@@ -22,9 +23,9 @@ export default function MainContent() {
       <section className="tv-series-list">
         <div className="container">
           <div className="row">
-            <h2 className="col-12">Serie Tv</h2>
+            <h2 className={style.section_title}>Serie Tv</h2>
+            <MediaList items={tvSeries} />
           </div>
-          <MediaList items={tvSeries} />
         </div>
       </section>
     </main>

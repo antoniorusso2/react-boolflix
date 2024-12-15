@@ -1,11 +1,21 @@
 .list {
+  padding: 1.2rem 0;
   display: flex;
   flex-wrap: wrap;
   color: aliceblue;
   align-items: center;
-  gap: 1.2rem;
+  row-gap: 2rem;
+  border: 1px solid var(--main-color);
+  border-radius: 0.8rem;
+
+  background: #2d6e7e70;
+  border-radius: 0.8rem;
+  box-shadow: 0 0px 0px var(--main-color);
+  backdrop-filter: blur(15.7px);
+  border: 1px solid rgba(49, 102, 1, 1);
 }
 
 .card_wrap {
   width: calc(100% / 4 - var(--base-padding));
+  padding: 1.2rem;
 }
